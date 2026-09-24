@@ -1,0 +1,35 @@
+Set-Content -Path .gitignore -Encoding ascii -Value @'
+.env
+.env.*
+!.env.example
+data/raw/
+*.pdf
+_cache/
+_indexes/
+chroma/
+*.faiss
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.deepeval/
+.deepeval*
+*.log
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+'@
+
+Set-Content -Path .env.example -Encoding ascii -Value @'
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+OLLAMA_BASE_URL=http://localhost:11434
+DEEPEVAL_TELEMETRY_OPT_OUT=YES
+RAGAS_DO_NOT_TRACK=true
+'@
